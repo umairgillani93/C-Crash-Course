@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-	string name = "Umair ";
+	string name = "Name";
 	cout << "Full name is: " << name << '\n';
 	cout << "string  length is: " << name.length() << '\n'; // return the length of string
 	cout << "string  length is: " << name.size() << '\n';   // return the size / length of string
@@ -29,6 +29,7 @@ int main() {
 	getline(cin, fullName);
 
 	cout << "full name is:  " << fullName << '\n';
+	cout << "full name is: " << Name
 
 
 	return 0;
