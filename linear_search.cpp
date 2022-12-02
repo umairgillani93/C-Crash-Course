@@ -3,14 +3,23 @@
 #include <cmath>
 using namespace std;
 
-int main() {
-	for(int i=0; i<5; ++i) {
-		cout << "outer is: " << i << '\n';
-
-		for(int j=0; j<5; ++j) {
-
-			cout << "inner j is: " << j << '\n';
-		}
-
+int linear_search(arr[], idx) {
+	int i = 0;
+	while (i < sizeof(arr) / sizeof(arr[0])) {
+		if (arr[i] == idx) 
+			return i;
+		else
+			++i;
+	}
+	cout << "item not found" << '\n';
 	}
 }
+
+int main() {
+	int arr[] = {1,2,3,4,5};
+	int n = 3;
+
+	cout << linear_search(arr, n) << endl;
+
+}
+

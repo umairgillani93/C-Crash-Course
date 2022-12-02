@@ -16,9 +16,20 @@ void display_string(string s) {
 	
 }
 
+// arguments passed by values
 void call(string n, int age) {
 	cout << "name is: " << n << " and I'm " << age << "years old" <<  '\n';
 }
+
+// arguments passed by references
+void swap_nums(int &x, int &y) {
+	int z = x;
+	x = y;
+	y = z;
+
+}
+
+
 int main() {
 //	cout << str << '\n';
 	display_string(string_func());
