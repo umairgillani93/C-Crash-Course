@@ -20,5 +20,8 @@ int main() {
 	cout << new_var << '\n';
 	cout << &new_var_ref << '\n';
 
+	string names = "name1, name2";
+	cout << &names << '\n';
+
 
 }
