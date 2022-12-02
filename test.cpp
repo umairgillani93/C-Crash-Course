@@ -6,6 +6,7 @@ using namespace std;
 int main() {
 	
 	int var1 = 15;
+	float new_float = 3974.349;
 	float var2 = 347.347;
 	char var3 = 't';
 	double var4 = 3497347347347;
@@ -16,6 +17,7 @@ int main() {
 	cout << "charater is " <<  var3 << '\n';
 	cout << "double is " << var4 << '\n';
 	cout << "string is " << text << '\n';
+	cout << "float is " << new_float << '\n';
 
 	return 0;
 
