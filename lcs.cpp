@@ -5,23 +5,26 @@ using namespace std;
 int main() {
 	int size;
 	cin >> size;
-	vector<int> arr;
-	
-	for (int i = 0; i < size; i++) {
-		int x;
-		cin >> x;
-		arr.push_back(x);
+	vector<int> v;
+	for (int i = 0; i <= size; i++) {
+		int a;
+		cin >> a;
+		v.push_back(a);
 	}
+	for (int j = 0; j < v.size(); j++) {
+		cout << v[j] << '\n';
+	}
+	cout << '\n';
+	cout << '\n';
 
-	cout << "Array is ready " << '\n';
-	
-	int best = 0;
-	int sum = 0;
-
-	for (int j = 0; j < size; j++) {
-		sum = max(arr[j], sum + arr[j]);
-		best = max(best, sum);
+	int best;
+	int sum;
+	best = 0;
+	sum = 0;
+	for (int i = 0; i < v.size(); i++) {
+		sum = max(v[i], sum + v[i]);
+		best = max(sum, best);
 	}
 	cout << best << '\n';
-	return 0;
+	return best;
 }
