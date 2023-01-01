@@ -24,13 +24,19 @@ def sol(arr):
 
 
 def sol1(arr):
-    best = 0 
-    c = 0
+    b = 0;
+    c = 0;
+    arr.sort()
     for i in range(len(arr) - 1):
         if arr[i] == arr[i + 1]:
             c += 1
         else:
-            best = max(c, best)
+            b = max(b, c)
+            print(arr[i])
+            print(b)
+            c = 0
+    return b
+
 
 
 def max_num(arr):
@@ -42,5 +48,5 @@ def max_num(arr):
             continue
     return m
 
-print(max_num(arr))
+print(sol1(arr))
 
