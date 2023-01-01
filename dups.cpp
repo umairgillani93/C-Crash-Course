@@ -2,22 +2,38 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-	vector<int> v{1,1,1,2,2,2,2,2,3,3};
-	int best = 0;
-	int count = 0;
+pair<int, int> sol() {
+	pair<int, int> p;
+	vector<int> v{1,2,2,2,3,3,3,3,4,4,4,4,4,4,4};
+	int b = 0;
+	int c = 0;
+	int idx = 0;
 	for (int i = 0; i < v.size() - 1; i++) {
-		if (v[i] == v[i + 1]){
-			count++;
+		if (v[i] == v[i + 1]) {
+			c++;
 		}
 		else {
-			best = max(best, count);
-			count = 0;
+			b = max(b, c);
+			p.first = v[i];
+			p.second = b;
+			idx = v[i]++;
+			c = 0;
 		}
 	}
-	best = max(best, count);
-	best++;
-	cout << best << "\n";
+	b = max(b, c);
+	b++;
+	p.first = idx++;
+	p.second = b;
+	cout << p.first << " " << p.second << '\n';
+	return p;
+	
+}
+
+
+int main() {
+	pair<int, int> s;
+	s = sol();
+	cout << s.first << "  " <<  s.second << '\n';
 	return 0;
 }
 
