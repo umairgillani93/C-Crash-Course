@@ -3,25 +3,29 @@
 using namespace std;
 
 int main() {
-	vector<int> v{10, 20, 35, 50, 75, 80};
+	vector<int> A{10, 20, 35, 50, 75, 80};
 	int x;
 	cin >> x;
-	vector<pair<int, int>> new_v;
-	for (int i = 0; i < v.size(); i++) {
-		for (int j = v.size() -1; v > 0; j++) {
-			if (v[i] + v[j] == x) {
-				new_v.push_back(make_pair<i, j>);
+	pair<int, int> p;
+	sort(A.begin(), A.end());
+	for (int i = 0; i < A.size(); i++) {
+		for (int j = A.size(); j = 0; j--) {
+			if (A[i] + A[j] == x) {
+				p.first = A[i];
+				p.second = A[j];
+				cout << p.first << '\n';
+				cout << p.second << '\n';
+				break;
 			}
-			else if (v[i] + v[j] > x) {
+			else if (A[i] + A[j] > x) {
 				j--;
 			}
 			else {
-				i--;
+				i++;
 			}
 		}
-	
+
 	}
-	cout << new_v[0][0] << '\n';
 	return 0;
 	
 }
