@@ -33,6 +33,14 @@ int main() {
 		cout << p_new[i] << '\n';
 	}
 
+	// Array pointers
+	// For sequential datatypes when creating pointer we only assign the address of item at index 0.
+	int A[5] = {1,2,3,4,5};
+	int *ap;
+	ap = &A[0];
+	cout << *ap << '\n';
+	cout << ap << '\n';
 	return 0;
+
 
 }
