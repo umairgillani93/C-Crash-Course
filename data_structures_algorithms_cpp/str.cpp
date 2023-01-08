@@ -4,6 +4,9 @@
 // Used to defined things having multiple values and attributes; consider example of a Rectangle
 
 #include <bits/stdc++.h>
+#include <iostream>
+#include <stdio.h>
+#include <string>
 using namespace std;
 
 struct Rectangle {
@@ -23,7 +26,7 @@ struct Complex {
 struct Student {
 	int age; // student's age
 	int id; // student's id 
-	char cls[10]; // student's class
+	string cls; // student's class
 	//char first[10]; // first name
 	//char last[10]; // last name
 	//char dept[20]; // department
@@ -49,7 +52,9 @@ int main() {
 
 	cout << s.id << '\n';
 	cout << s.age<< '\n';
-	printf("%s", s.cls);
+	for (int i = 0; i < 5; i++) {
+		cout << s.cls[i] << '\n';
+	}
 	//cout << s.first<< '\n';
 	//cout << s.last<< '\n';
 	//cout << s.dept<< '\n';
