@@ -22,23 +22,38 @@ struct Complex {
 
 struct Student {
 	int age; // student's age
+	int id; // student's id 
 	char cls[10]; // student's class
-	char first[10]; // first name
-	char last[10]; // last name
-	char dept[20]; // department
-	char address[50]; // address
+	//char first[10]; // first name
+	//char last[10]; // last name
+	//char dept[20]; // department
+	//char address[50]; // address
 	
-	// memory consumed in bytes; age = 4, cls = 10, first = 10, second = 10, dept = 20, address = 50;
-	// 4 + 10 + 10 + 10 + 20 + 50 = 104 bytes
+	// memory consumed in bytes; age = 4, id = 4, cls = 10, first = 10, second = 10, dept = 20, address = 50;
+	// 4 + 4 + 10 + 10 + 10 + 20 + 50 = 108 bytes
 
-}
+};
 
 
 int main() {
-	struct Rectangle r{10, 15}; // declare + initialize the structure
-	cout << r.len << '\n';
-	cout << r.breath << '\n';
-	cout << "Area from struct is: " << r.len * r.breath << '\n';
+	// struct rectangle r{10, 15}; // declare + initialize the structure
+	
+	struct Student s;
+	s.age = 15;
+	s.id = 11;
+	s.cls = "class";
+	//s.first = "fist_";
+	//s.last = "last_";
+	//s.dept = "maths";
+	//s.address = "std add";
+
+	cout << s.id << '\n';
+	cout << s.age<< '\n';
+	printf("%s", s.cls);
+	//cout << s.first<< '\n';
+	//cout << s.last<< '\n';
+	//cout << s.dept<< '\n';
+	//cout << s.address << '\n';
 	return 0;
 
 }
