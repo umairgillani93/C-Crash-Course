@@ -40,6 +40,34 @@ int main() {
 	ap = &A[0];
 	cout << *ap << '\n';
 	cout << ap << '\n';
+
+	for (int i = 0; i < 5; i++) {
+		cout << p[i] << '\n';
+	}
+	
+	// Another heap pointer example
+	int *p_heap;
+	p_heap = new int[3];
+	
+	// Assign values to the indexes
+	p[0] = 5;
+	p[1] = 10;
+	p[2] = 11;
+
+	for (int j = 0; j < 3; j++) {
+		cout << p[j] << '\n';
+	}
+	// Delete space created on heap
+	// delete [] p_heap;
+	cout << "space deleted" << '\n';
+	free(p_heap);
+
+	for (int j = 0; j < 3; j++) {
+		cout << p[j] << '\n';
+	}
+
+
+
 	return 0;
 
 
