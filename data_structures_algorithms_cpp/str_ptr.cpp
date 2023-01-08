@@ -21,5 +21,13 @@ int main() {
 
 	cout << r.len << '\n';
 	cout << r.breath << '\n';
+
+	// creates a struct Rectangle on Heap
+	struct Rectangle *p_new;
+	p_new = new Rectangle;
+
+	p -> len = 100;
+	p -> breath = 1000;
+	
 	return 0;
 }	
