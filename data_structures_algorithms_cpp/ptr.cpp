@@ -7,6 +7,11 @@ using namespace std;
 // Reason: That's why we use Pointers to access "Heap" memory. We declare Pointer (address variable) at "Stack" and it accesse "Heap"
 // Pointers are also used for "Parameters Passing".
 
+struct Rectangle {
+	int len;
+	int breath;
+};
+
 int main() {
 	int a; // declare an integer
 	a = 10; // initialize an integer
@@ -66,9 +71,19 @@ int main() {
 		cout << p[j] << '\n';
 	}
 
+	// Every pointer takes same size on memory
+	int *p1;
+	char *p2;
+	float *p3;
+	double *p4;
+	struct *p5;
 
+	cout << sizeof(p1) << '\n';
+	cout << sizeof(p2) << '\n';
+	cout << sizeof(p3) << '\n';
+	cout << sizeof(p4) << '\n';
+	cout << sizeof(p5) << '\n';
 
 	return 0;
-
 
 }
