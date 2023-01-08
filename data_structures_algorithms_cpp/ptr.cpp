@@ -16,11 +16,22 @@ int main() {
 	
 	// *p is at stack and referencing to the address of "a"
 	
-	cout << "a Address " << &a << '\n';
-	cout << "a Value " << a << '\n';
-	cout << "a Ptr " << p << '\n';
-	cout << "a Ptr value " << *p << '\n';
-	
+	//cout << "a Address " << &a << '\n';
+	//cout << "a Value " << a << '\n';
+	//cout << "a Ptr " << p << '\n';
+	//cout << "a Ptr value " << *p << '\n';
+
+	// allocate memory in Heap using pointers
+	int *p_new; 
+	p_new = new int[5]; // on heap
+	// p_new[0] on stack, we can access from first index till all the size of pointers array at Heap
+
+	cout << p_new << '\n';
+	cout << *p_new << '\n';
+
+	for (int i = 0; i < 5; i++) {
+		cout << p_new[i] << '\n';
+	}
 
 	return 0;
 
