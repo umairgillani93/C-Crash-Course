@@ -1,26 +1,62 @@
 #include <iostream>
-#include <string>
+#include <bits/stdc++.h>
 using namespace std;
 
+int binary_search(vector<int> arr, int x) {
+	int lo = 0;
+	int hi = arr.size() - 1;
+
+	while (lo <= hi) {
+		int mid = floor((lo + hi) / 2);
+
+		if (arr[mid] > x) {
+			hi = mid - 1;
+		}
+
+		else if (arr[mid] < x) {
+			lo = mid + 1;
+		}
+
+		else {
+			return mid;
+		}
+	}
+
+	return -1;
+		
+}
+
+int bin_search_rec(vector<int> arr, int x) {
+	// performs binary search recursive
+	
+	int lo = 0;
+	int hi = arr.size() - 1;
+	
+	if (lo < hi) {
+		int mid = floor((lo + hi) / 2);
+
+		vector<int> left;
+		vector<int> right;
+
+		for (int i = 0; i < mid; i++) {
+			
+		}
+
+		if (arr[mid] < x) {
+			
+		}
+	}
+}
 
 int main() {
-	
-	int var1 = 15;
-	float new_float = 3974.349;
-	float var2 = 347.347;
-	char var3 = 't';
-	double var4 = 3497347347347;
-	string text = "hey there";
 
-	cout << "integer is " << var1 << '\n';
-	cout << "float is " << var2 << '\n';
-	cout << "charater is " <<  var3 << '\n';
-	cout << "double is " << var4 << '\n';
-	cout << "string is " << text << '\n';
-	cout << "float is " << new_float << '\n';
+	int n;
+	cin >> n;
+	vector<int> v {1,2,3,4,5};
 
+	cout << binary_search(v, n) << '\n';
 	return 0;
 
-	
 }
+
 
