@@ -3,6 +3,7 @@
 using namespace std;
 
 void rec(int n) {
+	int x = 1;
 	if (n > 0) {
 		cout << n << '\n';
 		rec(n - 1);
