@@ -1,39 +1,54 @@
+#include <iostream>
 #include <bits/stdc++.h>
+
 using namespace std;
 
-int ls(vector<int> v, int n) {
-	int i = 0;
-	while (i < v.size()) {
-		if (v[i] == n) {
-			//cout << "found at index " << i << '\n';
+struct Array {
+	int A[20];
+	int length;
+	int size;
+};
+
+int ls(vector<int> arr, int k) {
+	for (int i = 0; i < arr.size(); i++) {
+		if (arr[i] == k) {
 			return i;
 		}
-		else {
-			i++;
-		}
-	} 
+		else {continue;}
+	}
 
-	return 0;
+	return -1;
+}
+
+int LinearSearch(struct Array arr, int k) {
+	for (int i = 0; i < arr.length; i++) {
+		if (k == arr.A[i]) {
+			return i;
+		}
+		else {continue;}
+	}
+	return -1;
 }
 
 int main() {
-	// linear search implementation
-	// takes two items; an array and number
-	// returns the index of number; if present in given array
-	int size;
-	int n;
-	cin >> size;
-	vector<int> v;
+	//int arr_size;
+	//cin >> arr_size;
+	//vector<int> input;
 
-	for (int i = 0; i < size; i++) {
-		cin >> n;
-		v.push_back(n);
-	}
-
-	//for (int j = 0; j < size; j++) {
-	//	cout << v[j] << '\n';
+	//while (arr_size--) {
+	//	int a;
+	//	cin >> a;
+	//	input.push_back(a);
 	//}
 
-	cout << ls(v, n) << '\n';
+	//cout << ls(input, 6) << '\n';
+	
+	struct Array arr = {{2, 4, 6, 8, 10}, 5, 20};
+	cout << arr.length << '\n';
+	cout << arr.size << '\n';
+	int k;
+	cin >> k;
 
+	cout << LinearSearch(arr, k) << '\n';
+	return 0;
 }
