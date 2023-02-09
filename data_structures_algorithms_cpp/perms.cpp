@@ -10,7 +10,8 @@ void perm(char s[], int k) {
 	if (s[k] == '\0') {
 		Res[k] = '\0';
 		cout << Res << '\n';
-	}
+		}	
+	
 
 	else {
 		for (int i = 0; s[i] != '\0'; i++) {
