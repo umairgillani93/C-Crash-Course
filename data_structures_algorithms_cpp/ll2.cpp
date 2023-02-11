@@ -51,6 +51,16 @@ int count_nodes(struct Node *p) {
 	}
 	return cnt;
 }
+
+int sum_of_elements(struct Node *p) {
+	int sum = 0;
+	while (!p) {
+		sum = sum + (int) p -> data;
+		p = p -> next;
+	}
+
+	return sum;
+}
 int main() {
 	int A[] = {3, 5, 7, 10, 15};
 	int n = 5;
