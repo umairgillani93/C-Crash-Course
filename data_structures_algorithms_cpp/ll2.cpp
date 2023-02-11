@@ -43,11 +43,20 @@ void display(struct Node *p) {
 	}
 }
 
+int count_nodes(struct Node *p) {
+	int cnt = 0;
+	while (!p) {
+		cnt++;
+		p = p -> next;
+	}
+	return cnt;
+}
 int main() {
 	int A[] = {3, 5, 7, 10, 15};
 	int n = 5;
 	create(A, n);
 	display(head);
+	count_nodes(head);
 	return 0;
 }
 
