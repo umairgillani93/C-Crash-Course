@@ -61,12 +61,25 @@ int sum_of_elements(struct Node *p) {
 
 	return sum;
 }
+
+Node * search(struct Node *p, int k) {
+	while (!p) {
+		if (k == p -> data) {
+			return p;
+		}
+		else {p = p -> next;}
+	}
+
+	return NULL;
+
+}
 int main() {
 	int A[] = {3, 5, 7, 10, 15};
 	int n = 5;
 	create(A, n);
 	display(head);
 	count_nodes(head);
+	search(head, 7);
 	return 0;
 }
 
