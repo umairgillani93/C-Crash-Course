@@ -92,10 +92,9 @@ void insert_sorted(struct Node *pp, int k) {
 		else {
 			struct Node *t;
 			t -> data = 100;
-			t -> next = NULL;
+			t -> next = q -> next;
 			q -> next = t;
-			t -> next = p;
-
+			q -> next = t;
 		}
 	}
 }

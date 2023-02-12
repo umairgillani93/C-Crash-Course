@@ -11,58 +11,45 @@ struct Node {
 // initilize the head Node pointer globally
 struct Node *head;
 
+// creates a linked-list
+void create() {
+	struct Node *p;
+	struct Node *q;
+	head = new Node;
+	p = new Node;
+	q = new Node;
 
-// Create a linked-list
-void create(int arr[], int n) {
-	struct Node *last;
+	head -> data = 50;
+	head -> next = p;
+	p -> data = 100;
+	q -> data = 200;
 
-	head -> data = arr[0];
-	head -> next = NULL;
-	last -> next = NULL;
-	last = head;
-
-	for (int i = 1; i < n; i++) {
-		struct Node *middle;
-		middle -> data = arr[i];
-		middle -> next = NULL;
-		last -> next = middle;
-		last = middle;
-	}
-
+	p -> next = q;
+	q -> next = NULL;
+		
 }
 
-void display(struct Node *p) {
+void display(struct Node *n) {
+	while (n == NULL) {
+		cout << n -> data << '\n';
+		n = n -> next;
+	}	
+}
+
+void reverse(struct Node *p) {
+	struct Node *q;
+	struct Node *r;
 	while (!p) {
-		cout << p -> data << '\n';
+		r = q;
+		q = p;
 		p = p -> next;
+		p -> next = q;
+		q -> next = r;
 	}
-
-}
-
-int count_nodes(struct Node *p) {
-	int c = 0;
-	while (!p) {
-		++c;
-		p = p -> next;
-	}
-
-	return c;
-}
-
-Node * search(struct Node *p, int key) {
-	while (!p) {
-		if (key == p -> data) {
-			return p -> next;
-		}
-	}
-
-	return NULL;
 }
 
 int main() {
-	int arr[] = {1, 3, 5, 7, 9};
-	int size = 5;
-	create(arr, size);
+	create();
 	display(head);
-	return 0;
-}	
+	cout << "done" << '\n';
+}
