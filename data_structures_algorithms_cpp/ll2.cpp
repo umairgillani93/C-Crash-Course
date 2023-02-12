@@ -73,6 +73,33 @@ Node * search(struct Node *p, int k) {
 	return NULL;
 
 }
+
+void insert_sorted(struct Node *pp, int k) {
+	// take two-pointers
+	struct Node *p;
+	struct Node *q;
+	
+	// initialize both the pointers
+	p = head;
+	q = NULL;
+
+	while (!p) {
+		if (k > p -> data) {
+			q = p;
+			p = p -> next;
+		}
+
+		else {
+			struct Node *t;
+			t -> data = 100;
+			t -> next = NULL;
+			q -> next = t;
+			t -> next = p;
+
+		}
+	}
+}
+
 int main() {
 	int A[] = {3, 5, 7, 10, 15};
 	int n = 5;
