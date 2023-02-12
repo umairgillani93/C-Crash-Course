@@ -46,6 +46,7 @@ void reverse(struct Node *p) {
 		p -> next = q;
 		q -> next = r;
 	}
+	p = head;
 }
 
 int main() {
