@@ -22,6 +22,7 @@ void create(int A[], int n) {
 	
 	struct Node *last; // last node 
 	
+	head = (struct Node *)malloc(sizeof(struct Node));
 	head -> data = A[0];
 	head -> next = NULL;
 
@@ -29,6 +30,7 @@ void create(int A[], int n) {
 	
 	for (int i = 1; i < n; i++) {
 		struct Node *middle;
+		middle = (struct Node *)malloc(sizeof(struct Node));
 		middle -> data = A[i]; // assing array index to data of middle node
 		middle -> next = NULL; // assign middle's next-node to NULL
 		last -> next = middle; // assign last's next-node to middle
