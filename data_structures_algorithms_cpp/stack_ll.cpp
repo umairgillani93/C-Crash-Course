@@ -33,18 +33,40 @@ void push(int x) {
 int pop() {
 	struct Node *t;
 	t = (struct Node *)malloc(sizeof(struct Node));
-	if (top == NULL) {
+	if (head== NULL) {
 		cout << "Stack is empty!" << '\n';
 	}
 
 	else {
+		int x = 0;
 		struct Node *p;
-		p = top;
-		top = top -> next;
+		p = head;
+		head = head -> next;
 		x = t -> data;
 		delete t;
 		return x;
 
 	}
+}
+
+void display() {
+	struct Node *p;
+	p = head;
+
+	while (!p) {
+		cout << p -> data << '\n';
+		p = p -> next;
+	}
+
+}
+
+int main() {
+
+	push(10);
+	push(20);
+	push(30);
+	display();
+	cout << "done" << '\n';
+	return 0;
 }
 
