@@ -70,8 +70,29 @@ int stackTop(struct Stack st) {
 	}
 }
 
+int pop(struct Stack *st, int idx) {
+	// takes pointer to Structure Stack and index to pop from (mostly last index)
+	int x = -1;
+	if (st -> top == -1) {
+		cout << "Stack underflow!" << '\n';
+	}
+
+	else {
+		x = st -> s[st -> top--];
+		return x;
+	}	
+}
+
+
 int main() {
 	struct Stack st;
+
+	create(&st);
+	push(&st, 10);
+	push(&st, 20);
+	push(&st, 30);
+
+	display(st);
 	return 0;
 
 }
