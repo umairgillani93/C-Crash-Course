@@ -46,8 +46,8 @@ int dequeue(Queue *q) {
 	return x;
 }
 
-void display(struct Queue q) {
-	for (int i = q.front + 1; i < q.rear; i++) {
+void display(Queue q) {
+	for (int i = q.front + 1; i <= q.rear; i++) {
 		cout << q.Q[i] << '\n';
 	}
 }
@@ -60,6 +60,8 @@ int main() {
 	enqueue(&q, 20);
 	enqueue(&q, 30);
 	enqueue(&q, 40);
+	dequeue(&q);
+	dequeue(&q);
 	display(q);
 	return 0;
 }
