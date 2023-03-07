@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// Queue structure
 struct Queue {
 	int front; // front pointer
 	int rear; // rear pointer
@@ -10,6 +11,7 @@ struct Queue {
 	int *Q; // Array pointer for queue
 };
 
+// creating Queue 
 void create(struct Queue *q, int size) {
 	q -> size = size; // queue size
 	q -> front = -1; // front pointer
@@ -47,6 +49,7 @@ int dequeue(Queue *q) {
 }
 
 bool isEmpty(Queue *q){
+	// check if queue is empty
 	if (q -> front == q -> rear) {
 		return true;
 	}
@@ -57,6 +60,7 @@ bool isEmpty(Queue *q){
 }
 
 bool isFull(Queue *q) {
+	// check if queue is full
 	if (q -> rear == q -> size - 1) {
 		return true;
 	}
@@ -67,6 +71,7 @@ bool isFull(Queue *q) {
 }
 
 void display(Queue q) {
+	// Display queue items
 	for (int i = q.front + 1; i <= q.rear; i++) {
 		cout << q.Q[i] << '\n';
 	}
@@ -81,6 +86,7 @@ struct Node {
 
 struct Node *root; // global Node pointer
 
+// create tree structure
 void create_tree() {
 	Node *p, *t;
 	int x; 
