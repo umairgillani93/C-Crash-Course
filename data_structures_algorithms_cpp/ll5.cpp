@@ -90,16 +90,106 @@ int maxElement(struct Node *p) {
 	return max;
 }
 
+// insert node before first node
+// sample_node -> first -> second -> third -> .... -> last
+// sample_node -> next = first
+
+void insertNode(struct Node *p, int val) {
+	p -> data = val;
+	p -> next = head;
+	p = head;
+
+}
+
+void insertBeforeHeadNode(struct Node *p, int x) {
+	p = (struct Node *)malloc(sizeof(struct Node));
+	p -> data = x;
+	p -> next = head;
+	head = p;
+}
+
+
 int main() {
 	int A[] = {7, 9, 16, 11, 19};
 	int n = 5;
 	create(A, n);
-	//Display(head);
+	cout << "Before insertion" << '\n';
+	Display(head);
+	cout << "After insertion " << '\n';
+
+	int x = 3;
+	struct Node *sample;
+	sample = (struct Node *)malloc(sizeof(struct Node));
+	sample -> data = x;
+	sample -> next = head;
+	head = sample;
+	
+
+	
+	// insert Node at some position = pos
+	// we have a Linkedlist Node1 -> Node2 -> Node3 -> Node4 -> ... -> NodeLast
+	// insert at certain position pos
+	// traverse linked list and find the position with the help of counter
+	// insert a Node there 
+	// take pos - 1 index and assign (pos - 1) -> next = p;
+	// take p and assign p -> (pos + 1)
+	// let's start..
+	int val = 100;
+	int pos = 3;
+
+	struct Node *p;
+	p = (struct Node *)malloc(sizeof(struct Node));
+	int c = 0;
+	while (true) {
+		if (c < pos) {
+			p = p -> next;
+			c++;
+		}
+		else {
+			struct Node *t;
+			t = (struct Node *)malloc(sizeof(struct Node));
+			t -> data = val;
+			t -> next = p -> next;
+			p -> next = t;
+		}
+	}
+	Display(sample);
+
+
 	//display_recursive(head);
-	cout << "Maximum element is: " << maxElement(head) << '\n';
-	cout << countNodes(head) << '\n';
-	cout << countNodes(head);
-	cout << "sum is: " << '\n';
-	cout << sum(head) << '\n';
+	//cout << "Maximum element is: " << maxElement(head) << '\n';
+	//cout << countNodes(head) << '\n';
+	//cout << countNodes(head);
+	//cout << "sum is: " << '\n';
+	//cout << sum(head) << '\n';
 	return 0;
 }
+
+// create a linked list
+// first node
+// last node
+// first -> next = last
+// last -> next = NULL
+// middle node t
+// last -> next = t;
+// t = last;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
