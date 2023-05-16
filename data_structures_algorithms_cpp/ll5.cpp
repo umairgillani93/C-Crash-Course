@@ -117,6 +117,8 @@ int main() {
 	Display(head);
 	cout << "After insertion " << '\n';
 
+	// insert Node before Head Node in LinkedList
+	// time complexity O(N)
 	int x = 3;
 	struct Node *sample;
 	sample = (struct Node *)malloc(sizeof(struct Node));
@@ -127,6 +129,7 @@ int main() {
 
 	
 	// insert Node at some position = pos
+	// time complexity O(N)
 	// we have a Linkedlist Node1 -> Node2 -> Node3 -> Node4 -> ... -> NodeLast
 	// insert at certain position pos
 	// traverse linked list and find the position with the help of counter
