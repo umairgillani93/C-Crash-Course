@@ -37,10 +37,23 @@ void create(int A[], int n) {
 
 }
 
+int sum(struct Node *p) {
+	int s = 0;
+	while (p != NULL) {
+		s += 1;
+		p = p -> next;
+	}
+
+	cout << s << '\n';
+	return 0;
+
+}
+
 int main() {
 	int A[] = {1, 7, 4, 11, 13};
 	int n = 5;
 	create(A, n);
 	Display(first);
+	sum(first);
 	return 0;
 }
