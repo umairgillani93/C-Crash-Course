@@ -2,7 +2,8 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-// p     q     r..
+// The ideas is to take three pointers, p -> inital pointer, q -> next to p and r -> next to q
+// we'll traverse the LL and swap the positions of adjacent pointers, till we have a NULL pointer; indication of LL end.
 // n1 -> n2 -> n3 -> ... -> nn
 // n1 <- n2 <- n3 <- ... <- nn
 
