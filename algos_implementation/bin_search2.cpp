@@ -8,6 +8,7 @@ int main() {
 	// we find the mid-point of a sorted Array
 	// a = 0;
 	// b = size - 1;
+	// while (a <= b);
 	// mid = (a + b) / 2;
 	// check at A[k] == x;
 	// if yes return result
@@ -26,16 +27,15 @@ int main() {
 	// b = k - 1;
 	/* else we'll have to bring the a pointer to k + 1 and search in right half */
 	int  x;
-	x = 2;
+	cin >> x;
 	vector<int> A{1, 2, 3, 4, 5, 6};
 	int n = A.size() - 1;
 	int a = 0;
 	int b = n - 1;
 	// find the mid point
-	int k = (a + b) / 2;
-	cout << "k is: " << k << '\n';
 
-	for (int i = 0; i < n; i++) {
+	while (a <= b) {
+		int k = (a + b) / 2;
 		if (A[k] == x) {
 			cout << "item found at index: " << k << '\n';
 			break;
