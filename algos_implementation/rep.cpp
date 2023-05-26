@@ -4,19 +4,26 @@
 using namespace std;
 
 int main() {
-	string s = "some string";
+	// some string
+	// we have to find the maximum repeater charater
+	// let's  try it with map data structure (easy way)
 
-	int rep = 0;
-	int max = 0;
+	map<char, int> map;
+	string s = "some randome string";
+
 	for (int i = 0; i < s.size(); i++) {
-		
+		map[s[i]]++;
 	}
 
+
+	sort(map.begin(), map.end());
+
+	for (auto it = map.begin(); it != map.end(); it++) {
+		cout << "first: " << " "  << it -> first << " " << " second: " <<  it -> second << '\n';
+	}
+
+	
+	return 0;
 }
 
 
-// we have a string = "some string";
-// we need to find the maximum number of time a character has repeated
-// we'll have to initialize a counter
-// c = 0;
-// c++; when 
