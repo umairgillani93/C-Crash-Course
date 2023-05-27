@@ -3,33 +3,34 @@
 
 using namespace std;
 
+void swap(int &x, int &y) {
+	int z;
+	z = x;
+	x = y;
+	y = z;
+}
+
 int main() {
 	int n;
 	cin >> n;
 	vector<int> v(n);
-
 	for (int i = 0; i < n; i++) {
 		cin >> v[i];
 	}
 
-	vector<int> output(n);
-
-	for (int i = 0; i < v.size(); i++) {
-		for (int j = 0; j < v.size() - 1; j++) {
-
-			if (v[j] > v[j + 1]) {
-				int t;
-				t = v[j + 1];
-				output.push_back(t);
+	for (int j = 0; j < v.size(); j++) {
+		for (int k = 0; k < v.size() - 1; k++) {
+			if (v[k] > v[k + 1]) {
+				swap(v[k], v[k + 1]);
 			}
 
+			else {continue;}
 		}
 	}
 
-	for (int i = 0; i < output.size(); i++) {
-		cout << output[i] << " ";
+	for (auto x: v) {
+		cout << x << " ";
 	}
-
 	cout << '\n';
 
 	return 0;
