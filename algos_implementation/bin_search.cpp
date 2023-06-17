@@ -1,9 +1,4 @@
-#include <iostream>
-#include <bits/stdc++.h> 
-using namespace std;
-
-//int bsi(vector<int> arr, int low, int high, int x) {
-//	int mid;
+mid;
 //	mid = low + (low + high) / 2;
 //	while (low <= high) {
 //		if (arr[mid] == x) {
